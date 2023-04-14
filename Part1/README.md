@@ -54,3 +54,56 @@ You can find more information about the `FlatList` component [here](https://reac
 Now that we have a `TodoList` component, we will create a `Todo` component. This component will display a single todo.
 To do so, you will need to use the `View` component. This component will allow us to create a container.
 You can find more information about the `View` component [here](https://reactnative.dev/docs/view).
+
+## **State**
+
+---
+
+Now that we have created our components, we will now add some **state** to our app. We will use the `useState` hook to do so.
+The `useState` hook allows us to create a **state** variable and a function to update it. We will use this function to update the state.
+To use the `useState` hook, you will need to import it from `react`. You can do so by adding the following line at the top of your file:
+```bash
+import { useState } from 'react';
+```
+
+Now that we have imported the `useState` hook, we can use it. We will use it to create a state variable that will contain all the todos.
+To do so, you will need to add the following line inside the `App` function:
+```bash
+const [todos, setTodos] = useState([]);
+```
+
+Now that we have created a state variable that will contain all the todos, we will now create a state variable that will contain the search query.
+To do so, you will need to add the following line inside the `App` function:
+```bash
+const [searchQuery, setSearchQuery] = useState('');
+```
+
+Now that we have created our state variables, we will now use them in our components. We will start by using the `searchQuery` state variable in the `SearchBar` component.
+To do so, you will need to add the following line inside the `SearchBar` component:
+```bash
+value={searchQuery}
+```
+
+Now that we have used the `searchQuery` state variable in the `SearchBar` component, we will now use the `setSearchQuery` function in the `SearchBar` component.
+To do so, you will need to add the following line inside the `SearchBar` component:
+```bash
+onChangeText={setSearchQuery}
+```
+
+Now that we have used the `setSearchQuery` function in the `SearchBar` component, we will now use the `todos` state variable in the `TodoList` component.
+To do so, you will need to add the following line inside the `TodoList` component:
+```bash
+data={todos}
+```
+
+Now that we have used the `todos` state variable in the `TodoList` component, we will now use the `Todo` component in the `TodoList` component.
+To do so, you will need to add the following line inside the `TodoList` component:
+```bash
+renderItem={({ item }) => <Todo todo={item} />}
+```
+
+Now that we have used the `Todo` component in the `TodoList` component, we will now use the `todos` state variable in the `Todo` component.
+To do so, you will need to add the following line inside the `Todo` component:
+```bash
+<Text>{todo.title}</Text>
+```
