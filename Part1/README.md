@@ -54,5 +54,3 @@ You can find more information about the `FlatList` component [here](https://reac
 Now that we have a `TodoList` component, we will create a `Todo` component. This component will display a single todo.
 To do so, you will need to use the `View` component. This component will allow us to create a container.
 You can find more information about the `View` component [here](https://reactnative.dev/docs/view).
-
-Now that we have a `Todo` component, we will create a `TodoForm` component. This component will allow us to create a new todo.
