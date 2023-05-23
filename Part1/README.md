@@ -107,3 +107,5 @@ To do so, you will need to add the following line inside the `Todo` component:
 ```bash
 <Text>{todo.title}</Text>
 ```
+## **To go further**
+To go further you can try to add complex form with image and animation to do it you can go to the react native documentation on internet
